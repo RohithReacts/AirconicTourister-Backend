@@ -6,6 +6,7 @@ const authRoutes = require("./src/routes/authRoutes");
 const productsRoutes = require("./src/routes/productsRoutes");
 const userRoutes = require("./src/routes/userRoutes");
 const orderRoutes = require("./src/routes/orderRoutes");
+const emailRoutes = require("./src/routes/emailRoutes");
 
 const app = express();
 
@@ -27,6 +28,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/products", productsRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api/orders", orderRoutes);
+app.use("/api/email", emailRoutes);
 
 app.get("/", (req, res) => {
   res.send("Hello from Airconic Tourister Backend API Running");
